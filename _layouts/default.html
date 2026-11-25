@@ -9,6 +9,8 @@
     <meta name="color-scheme" content="light dark">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    {% comment %}Google Search Console の所有権の確認（使い方のサイト hitokago-guide と同じコード）。外すと確認が取り消されるので消さない{% endcomment %}
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{{ page.title | default: site.title }}">

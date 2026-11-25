@@ -10,6 +10,8 @@ description: 個人で iPhone アプリを開発している N.Y. のサイト�
 lang: ja
 url: https://nog-yo.github.io
 baseurl: ""
+# Google Search Console の所有権の確認のコード（公開してよい値）
+google_site_verification: Pn35TFsX1R9Bpgtu758KYm2SH3qwHmxTm9DM-RqNwB4
 # 開発者の X（Twitter）のアカウント
 x_account: NdeveloperY
 # 公開しないファイル
