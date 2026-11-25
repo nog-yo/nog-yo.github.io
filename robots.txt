@@ -1,0 +1,11 @@
+---
+# 検索エンジンは、ホスト名の直下のこのファイルだけを読む（/hitokago-guide/robots.txt などは読まれない）。
+# nog-yo.github.io の下のサイトのサイトマップを、ここにすべて並べる（サイトを足したら行を足す）
+layout: null
+sitemap: false
+---
+User-agent: *
+Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
+Sitemap: https://nog-yo.github.io/hitokago-guide/sitemap.xml

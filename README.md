@@ -5,3 +5,4 @@ https://nog-yo.github.io/ の原稿（GitHub Pages の Jekyll で組み立てる
 - アプリを足す: `_data/apps.yml` に 1 つ足し、アイコン（192×192 の PNG）を `images/apps/<id>.png` に置く。
 - このサイトのトップの名前（`_config.yml` の `title` と `alternate_names`。トップの WebSite の構造化データになる）とファビコン（`favicon.png`）は、Google の検索結果で、`nog-yo.github.io` の下のすべてのサイト（アプリごとの使い方のサイトも含む）のサイト名とアイコンに使われる。
 - 外部のサイトから読み込むもの（スクリプト・Web フォント・解析）は置かない。
+- `robots.txt` は、検索エンジンが `nog-yo.github.io` の下で読むただ 1 つの robots.txt。下のサイト（`/hitokago-guide/` など）のサイトマップもここに並べ、下のサイトを拒まない。サイトを足したら `Sitemap:` の行を足す。
