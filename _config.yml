@@ -1,0 +1,17 @@
+# nog-yo/nog-yo.github.io の GitHub Pages の Jekyll の設定。https://nog-yo.github.io/ に出す。
+# このサイトのトップの名前（WebSite の構造化データ）とファビコンは、Google の検索結果で
+# nog-yo.github.io の下のすべてのサイト（アプリごとの使い方のサイトも含む）のサイト名とアイコンに使われる
+title: N.Y. のアプリ
+# 検索結果でサイト名の候補にしてほしい別の名前（優先する順）
+alternate_names:
+  - N.Y.
+  - nog-yo.github.io
+description: 個人で iPhone アプリを開発している N.Y. のサイトです。作ったアプリの一覧と、それぞれの使い方・サポートのページへのリンクを載せています。
+lang: ja
+url: https://nog-yo.github.io
+baseurl: ""
+# 開発者の X（Twitter）のアカウント
+x_account: NdeveloperY
+# 公開しないファイル
+exclude:
+  - README.md

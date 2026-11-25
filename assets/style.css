@@ -1,0 +1,57 @@
+/* 見た目は iOS の設定アプリ・App Store に合わせ、システムの文字と色で作る（Web フォントは読み込まない） */
+:root {
+  --bg: #F2F2F7;
+  --card: #FFFFFF;
+  --ink: #000000;
+  --sub: rgba(60, 60, 67, 0.6);
+  --line: rgba(60, 60, 67, 0.18);
+  --link: #007AFF;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --card: #1C1C1E;
+    --ink: #FFFFFF;
+    --sub: rgba(235, 235, 245, 0.6);
+    --line: rgba(84, 84, 88, 0.65);
+    --link: #0A84FF;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.page { max-width: 680px; margin: 0 auto; padding: 64px 16px 80px; }
+
+.profile { text-align: center; margin-bottom: 56px; }
+.profile-icon { display: block; margin: 0 auto 12px; }
+.profile h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; }
+.profile p { margin: 0; font-size: 17px; }
+.profile .profile-links { margin-top: 8px; font-size: 15px; }
+
+.apps h2 { font-size: 22px; margin: 0 0 12px; padding: 0 4px; }
+.app-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.app { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: var(--card); border-radius: 16px; }
+/* iOS のアイコンと同じく、一辺の約 22.37% の角丸 */
+.app-icon { flex: none; border-radius: 22.37%; box-shadow: 0 0 0 0.5px var(--line); }
+.app-body { min-width: 0; }
+.app h3 { font-size: 20px; line-height: 1.3; margin: 2px 0 0; }
+.app h3 a { color: inherit; }
+.app-subtitle { margin: 2px 0 0; font-size: 15px; color: var(--sub); }
+.app-summary { margin: 10px 0 0; font-size: 15px; }
+.app-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin: 14px 0 0; font-size: 15px; }
+.app-links img { display: block; }
+
+@media (max-width: 480px) {
+  .page { padding-top: 48px; }
+  .app { flex-direction: column; gap: 12px; }
+  .app-icon { width: 64px; height: 64px; }
+}

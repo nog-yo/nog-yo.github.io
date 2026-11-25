@@ -1,0 +1,15 @@
+# 作ったアプリの一覧（トップに、この順で並ぶ）。アプリを足す時は、ここに 1 つ足し、アイコン（192×192 の PNG。角丸は CSS で付ける）を images/apps/ に置く。
+# - id:          アイコンのファイル名（images/apps/<id>.png）
+# - name:        アプリの名前（App Store と同じ）
+# - subtitle:    App Store のサブタイトル
+# - summary:     どんなアプリかの一文
+# - app_store_id: App Store のアプリの ID（ダウンロードのリンク）
+# - guide:       使い方・サポートのページ
+# - privacy:     プライバシーポリシー
+- id: hitokago
+  name: ひとかご
+  subtitle: カゴ付きの買い物リスト
+  summary: 買い忘れを防ぐ iPhone の買い物リストです。家で商品を追加し、お店では手に取った商品をカゴに入れながら回れます。
+  app_store_id: 6829760587
+  guide: https://nog-yo.github.io/hitokago-guide/
+  privacy: https://nog-yo.github.io/hitokago-guide/privacy/

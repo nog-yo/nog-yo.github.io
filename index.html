@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<main class="page">
+  <header class="profile">
+    <img class="profile-icon" src="{{ '/images/developer-icon.png' | relative_url }}" alt="" width="119" height="84">
+    <h1>N.Y.</h1>
+    <p>個人で iPhone アプリを開発しています。</p>
+    <p class="profile-links"><a href="https://x.com/{{ site.x_account }}">X（Twitter）: @{{ site.x_account }}</a></p>
+  </header>
+
+  <section class="apps" aria-labelledby="apps-title">
+    <h2 id="apps-title">アプリ</h2>
+    <ul class="app-list">
+      {% for app in site.data.apps %}
+      <li class="app">
+        <img class="app-icon" src="{{ '/images/apps/' | append: app.id | append: '.png' | relative_url }}" alt="" width="72" height="72">
+        <div class="app-body">
+          <h3><a href="{{ app.guide }}">{{ app.name }}</a></h3>
+          <p class="app-subtitle">{{ app.subtitle }}</p>
+          <p class="app-summary">{{ app.summary }}</p>
+          <p class="app-links">
+            <a href="https://apps.apple.com/jp/app/id{{ app.app_store_id }}"><img src="{{ '/images/app-store-badge.svg' | relative_url }}" alt="App Store からダウンロード" width="120" height="40"></a>
+            <a href="{{ app.guide }}">使い方とサポート</a>
+            <a href="{{ app.privacy }}">プライバシーポリシー</a>
+          </p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
